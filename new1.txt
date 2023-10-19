@@ -1,19 +1,19 @@
 #include<stdio.h>
 void main()
 {
-    int i, n, f = 1;
-    printf("Enter a positive integer");
+    int n, i;
+    double num, max = -9999999.0;
+    printf("Enter the number of elements");
     scanf_s("%d", &n);
-    if (n >= 0)
+    for (i = 1; i <= n; i++)
     {
-        for (i = n; i > 0; i--)
+        printf("Enter %d number", i);
+        scanf_s("%lf", &num);
+        if (num > max)
         {
-            f = i * f;
+            max = num;
         }
-        printf("Factorial is %d", f);
-    }
-    else {
-        printf("Factorial of negative number is not eligible");
-    }
 
+    }
+    printf("Max number is %.2lf", max);
 }
